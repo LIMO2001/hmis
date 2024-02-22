@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetic Diary</title>
+  <link rel="stylesheet" href="diabetic.css">
+</head>
+<body>
+  <form enctype = "multipart/form-data" method = "post"  action="diary.php">
+  <div class="container">
+    <h1>Diabetic Diary</h1>
+    <form id="diaryForm">
+      <label for="dayOfWeek">Day of the Week:</label>
+      <select id="dayOfWeek" required>
+        <option value="" disabled selected>Select day...</option>
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+      </select>
+      <label for="beforeEating">Before Eating (mg/dL):</label>
+      <input type="number" id="beforeEating" required>
+      <label for="afterEating">After Eating (mg/dL):</label>
+      <input type="number" id="afterEating" required>
+      <label for="bedtime">Bedtime (mg/dL):</label>
+      <input type="number" id="bedtime" required>
+      <button type="submit">Add Entry</button>
+    </form>
+    <div id="entries"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

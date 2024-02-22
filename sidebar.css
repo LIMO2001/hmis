@@ -1,0 +1,40 @@
+body{
+    height: 100vh;
+}
+.sidebar{
+    height:100%;
+    width:250px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:cyan;
+    overflow-x:hidden;
+    padding-top:20px;
+    background-image:images/hosi1.jpeg;
+}
+.sidebar a {
+    padding:10px 15px;
+    text-decoration:none;
+    font-size:18px;
+    color:cobalt blue;
+    display:block;
+}
+.sidebar a:hover{
+    background-color:#555;
+}
+.image-container{
+    dispaly:block;
+    width:100%;
+    height:auto;
+
+}
+.image-container:hover .image-overlay{
+    background-color:transparent;
+}
+.image-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}

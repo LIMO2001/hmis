@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Billing System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Medical Billing System</h1>
+  
+  <form id="billingForm">
+    <label for="patientName">Patient Name:</label>
+    <input type="text" id="patientName" required><br><br>
+
+    <div id="servicesContainer">
+      <div class="serviceItem">
+        <label for="service1">Service:</label>
+        <select class="service" id="service1">
+          <option value="consultation">Consultation ($50)</option>
+          <option value="xray">X-Ray ($100)</option>
+          <option value="bloodTest">Blood Test ($80)</option>
+        </select>
+
+        <label for="quantity1">Quantity:</label>
+        <input type="number" class="quantity" id="quantity1" min="1" value="1" required><br><br>
+      </div>
+    </div>
+
+    <button type="button" onclick="addService()">Add Service</button><br><br>
+
+    <div id="billSummary">
+      <h2>Bill Summary</h2>
+      <div id="totalAmount">Total Amount: $0.00</div>
+    </div>
+
+    <button type="submit">Generate Bill</button>
+  </form>
+
+  <script src="PAY.js"></script>
+
+<style>
+/* Styles for the medical billing system */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b3c7f7;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#servicesContainer {
+  margin-bottom: 20px;
+}
+
+.serviceItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+</style>

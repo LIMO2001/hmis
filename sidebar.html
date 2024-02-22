@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sidebar.css">
+<style>
+  .sidebar {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color:cobalt blue;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidebar h3 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .content {
+    margin-left: 25%;
+    padding: 20px;
+    transition: margin-left 0.5s;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" style="width:25%">
+  <h3 class="w3-bar-item">Profile</h3>
+  <a href="#" class="w3-bar-item w3-button">Book Appointment</a>
+  <a href="#" class="w3-bar-item w3-button">Medication</a>
+  <a href="#" class="w3-bar-item w3-button">Comments</a>
+  <a href="#" class="w3-bar-item w3-button">Diary</a>
+  <a href="#" class="w3-bar-item w3-button">Billing</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+<div class="container">
+  <h1> AMANI HOSPITAL</h1>
+</div>
+<div class="image-overlay"></div>
+</div>
+</div>
+<div class="sidebar" id="mySidebar">
+  <h3>Profile</h3>
+  <a href="#" class="w3-bar-item w3-button" onclick="showContent('bookAppointment')">Book Appointment</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showContent('medication')">Medication</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showContent('comments')">Comments</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showContent('diary')">Diary</a>
+  <a href="pay.html" class="w3-bar-item w3-button" onclick="showContent('billing')">Billing</a>
+</div>
+<div class="content" id="content">
+  <div id="bookAppointment" class="hidden">
+    <h1>Book Appointment</h1>
+    <div class="formbold-main-wrapper">
+      <div class="formbold-form-wrapper">
+        <form action="https://formbold.com/s/FORM_ID" method="POST">
+          <div class="formbold-mb-5">
+            <label for="name" class="formbold-form-label"> Full Name </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              class="formbold-form-input"
+            />
+          </div>
+          <div class="formbold-mb-5">
+            <label for="phone" class="formbold-form-label"> Phone Number </label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              class="formbold-form-input"
+            />
+          </div>
+          <div class="formbold-mb-5">
+            <label for="email" class="formbold-form-label"> Email Address </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="formbold-form-input"
+            />
+          </div>
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="date" class="formbold-form-label"> Date </label>
+                <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="time" class="formbold-form-label"> Time </label>
+                <input
+                  type="time"
+                  name="time"
+                  id="time"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+          </div>
+    
+          <div class="formbold-mb-5 formbold-pt-3">
+            <label class="formbold-form-label formbold-form-label-2">
+              Address Details
+            </label>
+            <div class="flex flex-wrap formbold--mx-3">
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="area"
+                    id="area"
+                    placeholder="Enter area"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="Enter city"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    placeholder="Enter state"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="post-code"
+                    id="post-code"
+                    placeholder="Post Code"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div>
+            <button class="formbold-btn">Book Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="medication" class="hidden">
+    <h1>Medication</h1>
+    <p>This is the content for medication.</p>
+  </div>
+  <div id="comments" class="hidden">
+    <h1>Comments</h1>
+    <p>This is the content for comments.</p>
+  </div>
+  <div id="diary" class="hidden">
+    <h1>Diary</h1>
+    <p>This is the content for diary.</p>
+  </div>
+  <div id="billing" class="hidden">
+    <h1>Billing</h1>
+    <p>This is the content for billing.</p>
+  </div>
+</div>
+<script>
+  function showContent(contentId) {
+    var contents = document.querySelectorAll('.content > div');
+    for (var i = 0; i < contents.length; i++) {
+      contents[i].classList.add('hidden');
+    }
+    document.getElementById(contentId).classList.remove('hidden');
+  }
+  </script> 
+</body>
+</html>

@@ -1,0 +1,41 @@
+ <html>
+ <link rel="stylesheet" href="st.css">
+ <form enctype = "multipart/form-data" method = "post"  action="registration.php">
+
+  <div class="container">                                                           
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" id="email" required>
+
+    <label for="d.o.b"><b>D.O.B</b></label>
+    <input type="date" placeholder="Enter D.O.B" name="dob" id="d.o.b" required>
+<br>
+<br>
+    <label for="id.no"><b>ID.NO</b></label>
+    <input type="number" placeholder="Enter ID NO" name="idno" id="id no" required>
+  <br><br>
+	<label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+	
+	<label for="phone"><b>Phoneno</b></label><br>
+  <input type="tel" placeholder="070 456-7890" name="phoneno" id="phone" pattern="[0-9]{10}" required>
+<br><br>
+	<label for="password"><b>password </b></label>
+    <input type="password" placeholder="Enter password" name="password" id="password" required>
+	<p>
+			Gender:
+			<input type="radio" name="gender" value="male" id="female">Male
+			<input type="radio" name="gender" value="female" id="female">Female
+<br><br>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="index.html">login</a>.</p>
+  </div>
+</form>
+</html> 
